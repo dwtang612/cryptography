@@ -1,43 +1,26 @@
-# print("-------------------------------------Cryptography-------------------------------------")
-# print("\n1. Encrypt")
-# print("2. Decrypt")
-# print("BACK")
-# print("\nEnter 'END' to complete program.\n")
-# value = input("Please input your value: ")
-# while value != 'END' or 'end':
-#     print("-------------------------------------Cryptography-------------------------------------")
-#     print("\n1. Encrypt")
-#     print("2. Decrypt")
-#     print("BACK")
-#     print("\nEnter 'END' to complete program.\n")
-#     value = input("Please input your value: ").upper()
-#     if value == '1':
-#         print("-------------------------------------Encryption-------------------------------------")
-#         print("\n1. Upload File")
-#         print("2. Input")
-#         print("\nEnter 'END' to complete program.\n")
-#         value = input("Please input your value: ")
-#     elif value == '2':
-#         print("-------------------------------------Decryption-------------------------------------")
-#         print("\n1. Upload File")
-#         print("2. Input")
-#         print("\nEnter 'END' to complete program.\n")
-#         value = input("Please input your value: ")
-# print("\n[END OF PROGRAM]")
+import os
 
-# Function for Encryption
+
+# Clear Console
+def clearConsole(): return os.system(
+    'cls' if os.name in ('nt', 'dos') else 'clear')
+
+
+# Function for main page
 def cryptography():
-    print("-------------------------------------Cryptography-------------------------------------")
+    clearConsole()
+    print("-------------------------------------Cryptography Tool-------------------------------------")
     print("Which tool would you like to use? ")
     print("\n1. Encryption Tool")
     print("2. Decryption Tool")
-    print("\nEnter 'BACK' to go back.")
-    print("Enter 'END' to complete program.\n")
+    print("\nEnter 'END' to complete program.\n")
     return input("Please input your value: ")
 
 
+# Function Encryption Tool Page
 def encryption():
-    print("-------------------------------------Encryption-------------------------------------")
+    clearConsole()
+    print("-------------------------------------Encryption Tool-------------------------------------")
     print("\n1. Upload File")
     print("2. Input")
     print("\nEnter 'BACK' to go back.")
@@ -45,8 +28,10 @@ def encryption():
     return input("Please input your value: ")
 
 
+# Function Decryption Tool Page
 def decryption():
-    print("-------------------------------------Decryption-------------------------------------")
+    clearConsole()
+    print("-------------------------------------Decryption Tool-------------------------------------")
     print("\n1. Upload File")
     print("2. Input")
     print("\nEnter 'BACK' to go back.")
@@ -54,12 +39,16 @@ def decryption():
     return input("Please input your value: ")
 
 
+# Main Script
 value = cryptography()
 while value != 'END' or 'end':
     if value == '1':
-        encryption()
+        value = encryption()
+
     elif value == '2':
-        decryption()
+        value = decryption()
+
     elif value == 'BACK' or 'back':
-        cryptography()
+        value = cryptography()
+
     print("\n[END OF PROGRAM]")
