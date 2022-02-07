@@ -14,7 +14,15 @@ def cryptography():
     print("\n1. Encryption Tool")
     print("2. Decryption Tool")
     print("\nEnter 'END' to complete program.\n")
-    return input("Please input your value: ")
+    value = input("Please input your value: ")
+    if value == '1':
+        encryption()
+    elif value == '2':
+        decryption()
+    elif value == 'END' or 'end':
+        return print('---------------------------------------END OF PROGRAM---------------------------------------')
+    else:
+        cryptography()
 
 
 # Function Encryption Tool Page
@@ -25,7 +33,13 @@ def encryption():
     print("2. Input")
     print("\nEnter 'BACK' to go back.")
     print("Enter 'END' to complete program.\n")
-    return input("Please input your value: ")
+    value = input("Please input your value: ")
+    if value == '1':
+        print('Please provide file name: ')
+    elif value == '2':
+        decryption()
+    else:
+        cryptography()
 
 
 # Function Decryption Tool Page
@@ -40,15 +54,4 @@ def decryption():
 
 
 # Main Script
-value = cryptography()
-while value != 'END' or 'end':
-    if value == '1':
-        value = encryption()
-
-    elif value == '2':
-        value = decryption()
-
-    elif value == 'BACK' or 'back':
-        value = cryptography()
-
-    print("\n[END OF PROGRAM]")
+cryptography()
