@@ -42,6 +42,8 @@ def encryption():
         print(stringName)
     elif value.lower() == 'back':
         cryptography()
+    elif value.lower() == 'end':
+        return print('---------------------------------------END OF PROGRAM---------------------------------------')
     else:
         encryption()
 
@@ -63,6 +65,8 @@ def decryption():
         print(stringName)
     elif value.lower() == 'back':
         cryptography()
+    elif value.lower() == 'end':
+        return print('---------------------------------------END OF PROGRAM---------------------------------------')
     else:
         decryption()
 
