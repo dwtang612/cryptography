@@ -15,11 +15,11 @@ def cryptography():
     print("2. Decryption Tool")
     print("\nEnter 'END' to complete program.\n")
     value = input("Please input your value: ")
-    if value == '1':
+    if value in ['1']:
         encryption()
-    elif value == '2':
+    elif value in ['2']:
         decryption()
-    elif value == 'END' or 'end':
+    elif value.lower() == 'end':
         return print('---------------------------------------END OF PROGRAM---------------------------------------')
     else:
         cryptography()
@@ -34,12 +34,16 @@ def encryption():
     print("\nEnter 'BACK' to go back.")
     print("Enter 'END' to complete program.\n")
     value = input("Please input your value: ")
-    if value == '1':
-        print('Please provide file name: ')
-    elif value == '2':
-        decryption()
-    else:
+    if value in ['1']:
+        fileName = input('Please provide file name: ')
+        print(fileName)
+    elif value in ['2']:
+        stringName = input('Please input string: ')
+        print(stringName)
+    elif value.lower() == 'back':
         cryptography()
+    else:
+        encryption()
 
 
 # Function Decryption Tool Page
@@ -50,7 +54,17 @@ def decryption():
     print("2. Input")
     print("\nEnter 'BACK' to go back.")
     print("Enter 'END' to complete program.\n")
-    return input("Please input your value: ")
+    value = input("Please input your value: ")
+    if value in ['1']:
+        fileName = input('Please provide file name: ')
+        print(fileName)
+    elif value in ['2']:
+        stringName = input('Please input string: ')
+        print(stringName)
+    elif value.lower() == 'back':
+        cryptography()
+    else:
+        decryption()
 
 
 # Main Script
