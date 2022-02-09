@@ -71,5 +71,11 @@ def decryption():
         decryption()
 
 
-# Main Script
+# Different types of decoder
+def ciphertype():
+    print("-------------------------------------Cipher Type-------------------------------------")
+    print("input value")
+    print("\n1. Upload File")
+
+    # Main Script
 cryptography()
