@@ -15,6 +15,11 @@ def cryptography():
     print("2. Decryption Tool")
     print("\nEnter 'END' to complete program.\n")
     value = input("Please input your value: ")
+    
+    enctype = print("\n1. CaesarCipher")
+    
+    value = input("\nWhat Type? ")
+    
     if value in ['1']:
         encryption()
     elif value in ['2']:
